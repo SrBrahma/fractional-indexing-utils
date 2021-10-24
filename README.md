@@ -9,6 +9,9 @@ For now, I will just drop its code here as I haven't befriended time yet. If you
 
 It assumes your FI (fractional indexed) objects has the property 'sortId', containing the fractional-indexing generated key, a pattern that I came up with. It could be a dynamic key, but for now it suits me well.
 
+When you want nested data, like categories and items, I suggest you to have them both as props in an object at the same level, and in the item, have the categoryId. This way you can easily change the item category and its order, without changing anything else. Smart! I had come up to this resolution because I am now using Firebase Firestore, and when both are in a single a doc, I can just deep update() the specific category/item with {['path.to.item']: 'notation'}.
+
+
 ```ts
 import { generateKeyBetween } from 'fractional-indexing';
 
