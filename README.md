@@ -5,7 +5,7 @@ Some weeks ago I had the necessity of allowing users to reorder their nested dra
 
 While the fractional-indexing lib works, it lacks some built-in functionalities that I reused some times in my client and in my server, and certainly people that uses the fractional-indexing had to the something similar to what I've done.
 
-For now, I will just drop its code here as I haven't befriended time yet. If you, fellow reader, found this somehow and want a npm package, open an issue so I feel more motivated to do it! I created this repo now because commonly I come to useful and reusable code but they never leave my programs. This is for now the middle ground between not publicizing at all and creating a npm package lol
+For now, I will just drop its code here as I haven't befriended time yet. If you, fellow reader, found this somehow and want a npm package, open an issue so I feel more motivated to do it! I created this repo now because commonly I come to useful and reusable code but they never leave my programs. This is for now the middle ground between not publicizing at all and creating a npm package lol. Not really too pretty rn, but this won't be popular at all.
 
 It assumes your FI (fractional indexed) objects has the property 'sortId', containing the fractional-indexing generated key, a pattern that I came up with. It could be a dynamic key, but for now it suits me well.
 
