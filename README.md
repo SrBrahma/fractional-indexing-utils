@@ -1,5 +1,5 @@
 # fractional-indexing-utils
-Common functionalities when using [fractional indexing](https://github.com/rocicorp/fractional-indexing)
+Common functionalities when using [fractional indexing](https://github.com/rocicorp/fractional-indexing) npm package. Typescript supported.
 
 Some weeks ago I had the necessity of allowing users to reorder their nested draggable lists, containing categories and items. I had basically the idea of creating the same as the fractional indexing, before I knew the already existence of it. As I am in a startup rush and time isn't my friend, I searched for dozens of pages at npm, in the hope that someone else had this idea before me and did implement it. In this case, someone had the idea and someone else implemented it.
 
