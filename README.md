@@ -1,11 +1,11 @@
 # fractional-indexing-utils
-Common functionalities when using [fractional indexing](https://github.com/rocicorp/fractional-indexing) npm package. Typescript supported.
+Common functionalities when using [fractional-indexing](https://github.com/rocicorp/fractional-indexing) npm package. Typescript supported.
 
-Some weeks ago I had the necessity of allowing users to reorder their nested draggable lists, containing categories and items. I had basically the idea of creating the same as the fractional indexing, before I knew the already existence of it. As I am in a startup rush and time isn't my friend, I searched for dozens of pages at npm, in the hope that someone else had this idea before me and did implement it. In this case, someone had the idea and someone else implemented it.
+Some weeks ago I had the necessity of allowing users to reorder their nested draggable lists, containing categories and items. I had basically the idea of creating the same as the fractional-indexing did, before I knew the already existence of it. As I am in a startup rush and time isn't my friend, I searched for dozens of pages at npm, in the hope that someone else had this idea before me and did implement it. In this case, someone had the idea and someone else implemented it.
 
 While the fractional-indexing lib works, it lacks some built-in functionalities that I reused some times in my client and in my server, and certainly people that uses the fractional-indexing had to the something similar to what I've done.
 
-For now, I will just drop its code here as I haven't befriended time yet. If you, fellow reader, found this somehow and want a npm package, open an issue so I feel more motivated to do it! I created this repo now because commonly I come to useful and reusable code but they never leave my programs.
+For now, I will just drop its code here as I haven't befriended time yet. If you, fellow reader, found this somehow and want a npm package, open an issue so I feel more motivated to do it! I created this repo now because commonly I come to useful and reusable code but they never leave my programs. This is for now the middle ground between not publicizing at all and creating a npm package lol
 
 It assumes your FI (fractional indexed) objects has the property 'sortId', containing the fractional-indexing generated key, a pattern that I came up with. It could be a dynamic key, but for now it suits me well.
 
@@ -60,7 +60,6 @@ export function arrayFromNestedFiRecord<
     keyChildren?: KeyChildren;
   },
 ): NestedFiRecord<A, B, KeyChildren>[] {
-  // const {bToAProp, keyChildren} = opts
   const record: Record<string, NestedFiRecord<A, B, KeyChildren>> = {};
   Object.entries(aFiRecord).forEach(([aId, aItem]) => {record[aId] = { ...aItem, _id: aId, [keyChildren]: [] } as NestedFiRecord<A, B, KeyChildren>;});
   Object.entries(bFiRecord).forEach(([bId, bItem]) => {
